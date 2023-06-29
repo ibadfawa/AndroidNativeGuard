@@ -76,10 +76,10 @@ void AndroidNativeGuard() {
         addLog("<span style='color: green;'>RiGisk</span>: <span style='color: red'>Zygote injection detected.</span>");
     }
 
-    services.push_back(new AntiDebug(onDebuggerDetected));
-    services.push_back(new FridaDetect(onFridaDetected));
-    services.push_back(new AntiDump(onDumpDetected));
-    services.push_back(new AntiLibPatch(onLibTampered));
+    //services.push_back(new AntiDebug(onDebuggerDetected));
+   // services.push_back(new FridaDetect(onFridaDetected));
+   // services.push_back(new AntiDump(onDumpDetected));
+   // services.push_back(new AntiLibPatch(onLibTampered));
 
     for (auto &service : services) {
         threads.emplace_back([&]() {
